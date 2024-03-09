@@ -1,0 +1,124 @@
+/*Login -- Iniciar sesion Organizador- Clientes*/
+body {
+    margin: 0%;
+    padding: 0%;
+    background-image: linear-gradient(to bottom right , #AC87C5, #C2D9FF);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    
+}
+/*Logo de la pagina*/
+#logoBolegrama{
+    
+    width: 290px;
+    height: 224px;
+    padding-top: 19px;
+    padding-left: 550px;
+}
+/*main */
+main{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+/*Formularios*/
+form #InSesion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#login-contenedor{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 23px;
+    padding-right: 82px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 925px;
+    height: 202px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#tipU{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#uname{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#pass{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+/*Lineas*/
+.row{
+    margin-bottom: 10px;
+}
+/*Input*/
+input[type="text"], input[type="password"]{
+    padding: 5px;
+    width: 285px; 
+    border: 1px solid whitesmoke; 
+    background-color:rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+/*Select*/
+select {
+    padding: 5px;
+    border-radius: 5px; 
+    border: 1px solid whitesmoke; 
+    background-color:white;
+    width: 200px; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+  /* Estilo cuando el select está enfocado */
+select:focus {
+    border-color: #AED2FF; /* Cambia el color del borde cuando está enfocado */
+    outline: none; /* Quita el contorno predeterminado */
+}
+
+#Btns{
+    display: flex;
+    align-items: center;
+    padding: 8px 52px;
+    margin-left: 99px;
+    gap: 157px;
+}
+
+#BtnLogin, #BtnRegistrar{
+    padding: 5px;
+    border-radius: 5px; 
+    border: 1px solid whitesmoke; 
+    width: 200px; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#BtnLogin:hover{
+    background-color:#7091F5; /* Nuevo color de fondo cuando el cursor está sobre el botón */
+}
+
+#BtnRegistrar:hover{
+    background-color: #793FDF;
+
+}
