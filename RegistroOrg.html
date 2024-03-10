@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login.- Iniciar Sesion "Bolegrama Events"</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Registro del Organizador.- Bolegrama </title>
+    <link rel="stylesheet" href="css/RegistroOrg.css">
 </head>
 <body>
     <header>
@@ -13,50 +13,68 @@
         </div>
     </header>
     <main>
-        <div id="login-contenedor">
-            <h2>Iniciar Sesion</h2>
-            <form id="InSesion" action="">
-                <div id="tipU"class="row">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-                          </svg>
-                    </div>
-                    <label for="TipoUsuario"></label><b>Tipo de Usuario:</b> </label>
-                    <select name="TipoUsuario" id="TipoUsuario">
-                        <option value="C">Cliente</option>
-                        <option value="O">Organizador</option>
-                    </select>
+        <div id="form-container">
+            <h3>Registrarse</h3>
+            <div id="tr"class="row">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                      </svg>
                 </div>
-                <div id="uname" class="row">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                          </svg>
-                    </div>
-                    <label for="Usuario"><b>Usuario/ Correo / Numero de Celular:</b> </label>
-                    <input type="text" name="Usuario" id="Usuario" class=".username-status" placeholder="Usuario/Correo/Numero de Celular" required>
+                <label for="TipoUsuario"><b>Tipo de Usuario:</b></label>
+                <select name="TipoUsuario" id="TipoUsuario" onchange="mostrarFormulario()">
+                    <option value="C">Cliente</option>
+                    <option value="O">Organizador</option>
+                </select>
+            </div>
+
+            <div id="formularioCliente" style="display: none;">
+              <!-- Formulario para el tipo de usuario cliente -->
+              <h3>Registro para Clientes</h3>
+              <div id="tr"class="row">
+                <label for="nombre_cliente"><b>Ingrese su nombre:</b></label>
+                <input type="text" name="nombre_cliente" placeholder="Nombre Cliente" required> 
+              </div>
+              <div id="tr"class="row">
+                <label for="apellido_cliente"><b>Ingrese su apellido:</b></label>
+                <input type="text" name="apellido_cliente" placeholder="Apellido Cliente" required>
+              </div>
+              <div id="tr"class="row">
+                <label for="telefono_cliente"><b>Ingrese su telefono:</b></label>
+                <input type="text" name="telefono_cliente" placeholder="Teléfono Cliente" required>
+              </div>
+              <div id="tr"class="row">
+                <label for="edad_cliente"><b>Ingrese su correo:</b></label>
+                <input type="text" name="correo_cliente" placeholder="Correo Cliente" required>
+              </div>
+              <div id="tr"class="row">
+                <label for="edad_cliente"><b>Ingrese su edad:</b></label>
+                <input type="number" min="18" name="edad_cliente" placeholder="Edad Cliente"  required>
+              </div>
+              <div id="tr"class="row">
+                <label for="contraseña_cliente"><b>Ingrese su contraseña:</b></label>
+                <input type="password" name="contraseña_cliente" placeholder="Contraseña Cliente" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{4,}$">
+                <span class="invalid-message">La contraseña debe tener al menos 4 caracteres, una mayúscula, una minúscula, un número y un carácter especial.</span>
+              </div>
+              <div id= Btns class="row">
+                <div>
+                    <input id="BtnLogin" class="btn" type="submit" value="Iniciar Sesion">
                 </div>
-                <div id="pass" class="row">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-                            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/>
-                          </svg>
-                    </div>
-                    <label for="password"><b>Contraseña:</b>  </label>
-                    <input type="password" name="password" id="password" class=".password-status" placeholder="Contraseña" required>
+                <div>
+                    <input id="BtnRegistrar" class="btn" type="submit" value="Registrarte">
                 </div>
-                <div id= Btns class="row">
-                    <div>
-                        <input id="BtnLogin" class="btn" type="submit" value="Iniciar Sesion">
-                    </div>
-                    <div>
-                        <input id="BtnRegistrar" class="btn" type="submit" value="Registrarte">
-                    </div>
-                </div>
-            </form>
+              </div>
+            </div>
+        
+            <div id="formularioOrganizador" style="display: none;">
+              <!-- Formulario para el tipo de usuario organizador -->
+              <h3>Formulario para Organizadores</h3>
+              <input type="text" name="nombre_organizador" placeholder="Nombre Organizador">
+              <input type="text" name="telefono_organizador" placeholder="Teléfono Organizador">
+              <button type="button">Enviar</button>
+            </div>
         </div>
+
     </main>
     <footer>
         <section id="footerContacto">
@@ -130,5 +148,6 @@
             </div>
         </section>
     </footer>
+    <script src="js/RegistroOrg.js"></script>
 </body>
 </html>

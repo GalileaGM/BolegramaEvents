@@ -6,11 +6,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff;
-    
 }
 /*Logo de la pagina*/
 #logoBolegrama{
-    
     width: 290px;
     height: 224px;
     padding-top: 19px;
@@ -25,13 +23,7 @@ main{
     font-size: 20px;
 }
 /*Formularios*/
-form #InSesion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-#login-contenedor{
+#form-container{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -45,37 +37,19 @@ form #InSesion {
     padding-top: 45px;
     padding-bottom: 80px;
     width: 925px;
-    height: 202px;
+    height: 500px;
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-#tipU{
+#tr{
     display: flex;
     align-items: center;
     gap: 5px;
 }
-#uname{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-#pass{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
+
 /*Lineas*/
 .row{
     margin-bottom: 10px;
-}
-/*Input*/
-input[type="text"], input[type="password"]{
-    padding: 5px;
-    width: 285px; 
-    border: 1px solid whitesmoke; 
-    background-color:rgba(0, 0, 0, 0.1);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
 }
 /*Select*/
 select {
@@ -94,7 +68,31 @@ select:focus {
     border-color: #AED2FF; /* Cambia el color del borde cuando está enfocado */
     outline: none; /* Quita el contorno predeterminado */
 }
-
+#formularioCliente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#formularioOrganizador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+/*Input*/
+input[type="text"], input[type="password"], input[type="number"]{
+    padding: 5px;
+    width: 285px; 
+    border: 1px solid whitesmoke; 
+    background-color:rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
 #Btns{
     display: flex;
     align-items: center;
@@ -102,6 +100,7 @@ select:focus {
     margin-left: 99px;
     gap: 157px;
 }
+
 
 #BtnLogin, #BtnRegistrar{
     padding: 5px;
@@ -121,6 +120,7 @@ select:focus {
 #BtnRegistrar:hover{
     background-color: #793FDF;
 }
+
 /*Footer el diseño completo */
 footer {
     padding: 20px 0;
